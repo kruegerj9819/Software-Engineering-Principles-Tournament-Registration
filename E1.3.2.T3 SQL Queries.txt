@@ -1,0 +1,16 @@
+For this first query, the tournament id and participant id is needed to filter out the team name.
+
+SELECT t.teamname
+FROM TournamentTeam tt
+JOIN Team t
+ON tt.teamname = t.teamname
+JOIN ParticipantTeam pt
+ON t.teamname = pt.teamname
+WHERE tt.tournID = ???? AND pt.PID = ????;
+
+
+For this query, use the team name from the first query to delete the participant from the team.
+
+DELETE pt
+FROM ParticipantTeam pt
+WHERE pt.teamname = ????;

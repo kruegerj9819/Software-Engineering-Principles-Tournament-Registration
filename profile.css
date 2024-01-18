@@ -1,0 +1,109 @@
+h1,p,a{
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    font-size: 20px;
+}
+
+button{
+    font-size: 30px;
+    border: none;
+    text-align: center;
+    color: white;
+    background-color: navy;
+    padding: 15px 50px;
+}
+button:hover{
+    background-color: #12125c;
+}
+.Info{
+    text-align: center;
+}
+
+.BasicInfo{
+    width: 600px;
+    border: 5px solid black;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.LocationInfo{
+    width: 600px;
+    border: 5px solid black;
+    text-align: center;
+    margin: 5px auto;
+    background-color: rgb(176, 176, 176);
+}
+
+.TeamInfo{
+    width: 600px;
+    border: 5px solid black;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.Prompt {
+    display: none;
+    margin: 5px auto;
+    font-size: 20px;
+    text-align: center;
+    resize: horizontal;
+}
+
+.pageheader {
+    overflow: hidden;
+    background-color: midnightblue;
+    margin-bottom: 16px;
+}
+
+.pageheader a {
+    display: block;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    margin-right: 2.5%;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.pageheader a:hover {
+    background-color: #12125c;
+}
+
+.head {
+    color: white;
+    border-color: navy;
+    width: 100%;
+    margin-left: 2.5%;
+}
+
+.footer1 {
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	background-color: navy;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.footer2 {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: navy;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.copyright {
+	font-size: 14px;
+}

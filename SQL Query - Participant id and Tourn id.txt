@@ -1,0 +1,12 @@
+Gets participant id and tournament id
+
+SELECT p.PID, tourn.TID
+FROM Participant p
+JOIN ParticipantTeam pt
+ON p.PID = pt.PID
+JOIN Team t
+ON t.teamname = pt.teamname
+JOIN TournamentTeam tt
+ON tt.teamname = t.teamname
+JOIN Tournament tourn
+ON tourn.TID = tt.tournID

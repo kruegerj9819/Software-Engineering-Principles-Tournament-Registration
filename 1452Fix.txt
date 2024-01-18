@@ -1,0 +1,5 @@
+$queryFK0 = $conn->prepare('SET FOREIGN_KEY_CHECKS = 0');
+$queryFK0->execute();
+//sandwhich query2
+$queryFK1 = $conn->prepare('SET FOREIGN_KEY_CHECKS = 1');
+$queryFK1->execute();

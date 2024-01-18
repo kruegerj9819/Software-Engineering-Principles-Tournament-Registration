@@ -1,0 +1,55 @@
+CREATE TABLE `AgileExpG14`.`Participant` (
+  `PID` INT NOT NULL,
+  `firstname` VARCHAR(15) NULL,
+  `lastname` VARCHAR(15) NULL,
+  `username` VARCHAR(20) NULL UNIQUE,
+  `password` VARCHAR(20) NOT NULL,
+  `participantlocationID` INT NULL,
+  PRIMARY KEY (`PID`),
+  FOREIGN KEY (`participantlocationID`) REFERENCES Location(`LID`));
+
+CREATE TABLE `AgileExpG14`.`Tournamement` (
+  `TID` INT NOT NULL,
+  `tournamentname` VARCHAR(45) NULL,
+  `startdate` DATE NULL,
+  `starttime` INT NULL,
+  `sport` VARCHAR(20) NULL,
+  `regdeadline` DATE NULL,
+  `tournlocationID` INT NULL,
+  `tournHostID` INT NULL,
+  PRIMARY KEY (`TID`),
+  FOREIGN KEY (`tournlocationID`) REFERENCES Location(`LID`),
+  FOREIGN KEY (`tournHostID`) REFERENCES TournamentHost(`HID`));
+
+CREATE TABLE `AgileExpG14`.`Location` (
+  `LID` INT NOT NULL,
+  `street` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `state` VARCHAR(20) NULL,
+  `zip` INT NULL,
+  PRIMARY KEY (`LID`));
+
+CREATE TABLE `AgileExpG14`.`Team` (
+  `teamname` VARCHAR(20) NOT NULL UNIQUE,
+  `coach` VARCHAR(45) NULL,
+  `teamlocationID` INT NULL,
+  PRIMARY KEY (`name`),
+  FOREIGN KEY (`teamlocationID`) REFERENCES Location(`LID`));
+
+CREATE TABLE `AgileExpG14`.`TournamentHost` (
+  `HID` INT NOT NULL,
+  `username` VARCHAR(20) NULL UNIQUE,
+  `password` VARCHAR(20) NULL,
+  PRIMARY KEY (`username`));
+
+CREATE TABLE `AgileExpG14`.`ParticipantTeam` (
+  `PID` INT NULL,
+  `teamname` VARCHAR(20) NULL UNIQUE,
+  FOREIGN KEY (`PID`) REFERENCES Participant(`PID`),
+  FOREIGN KEY (`teamname`) REFERENCES Team(`teamname`));
+
+CREATE TABLE `AgileExpG14`.`TournamentTeam` (
+  `tournID` INT NULL,
+  `teamname` VARCHAR(20) NULL,
+  FOREIGN KEY (`tournID`) REFERENCES Tournament(`TID`),
+  FOREIGN KEY (`teamname`) REFERENCES Team(`teamname`));

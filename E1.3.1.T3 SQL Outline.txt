@@ -1,0 +1,4 @@
+//This will return the number of participants already in the database so a duplicate PID will not be used
+SELECT COUNT(*) FROM Participant;
+//Every value will need to be replaced by whatever php variable you use
+insert into Participant (PID, firstname, lastname, username, password, participantlocationID) values (count+1, null, null, null, null, null);

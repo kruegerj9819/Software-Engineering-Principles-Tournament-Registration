@@ -1,0 +1,31 @@
+Notes on Scrum 11-28-2023 (I'm pretty sure we were told to take notes on the presentation):
+
+DailyScrum:
+Hold teams accountable
+Some accomplishment for tasks
+Don't sit around choose next task (put name on task)
+
+After Scrum:
+Swap tasks
+Work together figure it out
+Figure out who's stuck
+Do not fix impediments during scrum
+Post notes on daily scrum log
+
+
+Discussion on Canvas:
+Post logs on discussion post
+Include date, time, and attendees
+Go one by one example,
+Partner: Treevor
+1. Completed writing up tasks for E1
+2. Added descriptions to each task
+3. We have to plan out nex tasks
+4. Do you have another task [Are you blocked]? (Next task)
+
+Server info:
+Pages-> Server Details -> password to access
+MySQL Workbench
+Includes a link to website/server
+webpage should be prettier
+Wind-SPP to access code, shows directorys.

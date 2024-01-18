@@ -1,0 +1,7 @@
+Shows necessary tournament information
+
+SELECT t.TID, t.sport, t.tournamentname, t.regdeadline, t.startdate, t.starttime, l.street, l.city, l.state, l.zip
+FROM Tournament t
+JOIN Location l
+ON t.tournlocationID = l.LID
+WHERE t.TID = ????????;

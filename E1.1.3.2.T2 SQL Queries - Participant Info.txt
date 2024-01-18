@@ -1,0 +1,23 @@
+Participant gets info about themselves
+
+SELECT p.firstname, p.lastname, p.username, l.street, l.city, l.state, l.zip
+FROM Participant p
+JOIN Location l
+ON p.participantlocationID = l.LID
+WHERE p.PID = 2;
+
+
+
+Participant gets info about the teams they are in and what tournament those teams are in
+
+SELECT t.teamname, t.coach, tourn.TID, tourn.tournamentname
+FROM Participant p
+JOIN ParticipantTeam pt
+ON p.PID = pt.PID
+JOIN Team t
+ON t.teamname = pt.teamname
+JOIN TournamentTeam tt
+ON tt.teamname = t.teamname
+JOIN Tournament tourn
+ON tourn.TID = tt.tournID
+WHERE p.PID = 2;
